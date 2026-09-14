@@ -148,7 +148,7 @@ a { color: inherit; }
   color: var(--white);
   background:
     linear-gradient(120deg, rgba(17, 17, 17, 0.98) 0 53%, rgba(17, 17, 17, 0.88) 100%),
-    url("assets/images/sobreolucas.jpg") center 78% / cover;
+    url("assets/images/lucasprofissinional.jpg") center 78% / cover;
 }
 
 .hero-layout {
@@ -294,10 +294,10 @@ a { color: inherit; }
 
 .portrait {
   min-height: 690px;
-  background-image: url("assets/images/sobreolucas.jpg");
+  background-image: url("assets/images/lucasprofissinional.jpg");
   background-repeat: no-repeat;
-  background-size: auto 137%;
-  background-position: left 106%;
+  background-size: cover;          /* Cobre o espaço perfeitamente */
+  background-position: center top;  /* Centraliza no topo/meio */
   border-bottom: 8px solid var(--red);
   filter: saturate(0.85) contrast(1.04);
 }
