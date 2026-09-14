@@ -293,11 +293,13 @@ a { color: inherit; }
 }
 
 .portrait {
-  min-height: 690px;
+  width: 100%;
+  aspect-ratio: 4 / 5;            /* Mantém proporção perfeita de retrato */
+  min-height: 520px;
   background-image: url("assets/images/lucasprofissinional.jpg");
   background-repeat: no-repeat;
-  background-size: cover;          /* Cobre o espaço perfeitamente */
-  background-position: center top;  /* Centraliza no topo/meio */
+  background-size: cover;          /* Cobre o espaço preenchendo as bordas */
+  background-position: center top; /* Enquadra rosto e tronco */
   border-bottom: 8px solid var(--red);
   filter: saturate(0.85) contrast(1.04);
 }
@@ -680,7 +682,11 @@ a { color: inherit; }
 
   .section { padding: 84px 0; }
   .about-layout { grid-template-columns: 1fr; }
-  .portrait { min-height: 520px; background-size: auto 137%; }
+  .portrait { 
+  min-height: 480px; 
+  background-size: cover; 
+  background-position: center 20%; 
+}
   .about-copy { padding-top: 0; }
   .about h2, .section-heading h2 { font-size: clamp(3.2rem, 15vw, 4.4rem); }
   .credentials ul { grid-template-columns: 1fr; }
@@ -711,7 +717,11 @@ a { color: inherit; }
   .hero-marquee { gap: 32px; padding-inline: 20px; }
   .hero-marquee span::after { margin-left: 32px; }
 
-  .portrait { min-height: 440px; background-size: auto 130%; }
+  .portrait { 
+  min-height: 380px; 
+  background-size: cover; 
+  background-position: center top; 
+}
   .about h2, .section-heading h2 { font-size: clamp(3rem, 14.5vw, 3.8rem); }
   .about-copy .lead { font-size: 1.05rem; }
 
